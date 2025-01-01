@@ -16,7 +16,7 @@ importers:
         version: 1.2.2(@types/react@19.0.2)(react-dom@19.0.0(react@18.3.1))(react@18.3.1)
       '@styleshift/utils':
         specifier: github:styleshift/utils
-        version: https://codeload.github.com/styleshift/utils/tar.gz/ee0a1300baf1a96c0ac3b4e20d22df1daf6c5e94
+        version: https://codeload.github.com/styleshift/utils/tar.gz/8bc879f03835bffd9ba9bef27b8d125bcfc39148
       '@types/react':
         specifier: ^19.0.2
         version: 19.0.2
@@ -640,10 +640,10 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@styleshift/utils@https://codeload.github.com/styleshift/utils/tar.gz/ee0a1300baf1a96c0ac3b4e20d22df1daf6c5e94':
+  '@styleshift/utils@https://codeload.github.com/styleshift/utils/tar.gz/8bc879f03835bffd9ba9bef27b8d125bcfc39148':
     resolution:
       {
-        tarball: https://codeload.github.com/styleshift/utils/tar.gz/ee0a1300baf1a96c0ac3b4e20d22df1daf6c5e94,
+        tarball: https://codeload.github.com/styleshift/utils/tar.gz/8bc879f03835bffd9ba9bef27b8d125bcfc39148,
       }
     version: 0.0.1
 
@@ -1561,7 +1561,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.29.1':
     optional: true
 
-  '@styleshift/utils@https://codeload.github.com/styleshift/utils/tar.gz/ee0a1300baf1a96c0ac3b4e20d22df1daf6c5e94':
+  '@styleshift/utils@https://codeload.github.com/styleshift/utils/tar.gz/8bc879f03835bffd9ba9bef27b8d125bcfc39148':
     {}
 
   '@types/estree@1.0.6': {}
