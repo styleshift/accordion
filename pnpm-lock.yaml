@@ -26,9 +26,6 @@ importers:
       '@radix-ui/react-accordion':
         specifier: ^1.2.2
         version: 1.2.2(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      '@styleshift/utils':
-        specifier: github:styleshift/utils
-        version: https://codeload.github.com/styleshift/utils/tar.gz/1aaf9ffac63fd7c565e4ac1a610ff61e18b02980
       git:
         specifier: link:github.com:styleshift/utils.git
         version: link:github.com:styleshift/utils.git
@@ -645,13 +642,6 @@ packages:
       }
     cpu: [x64]
     os: [win32]
-
-  '@styleshift/utils@https://codeload.github.com/styleshift/utils/tar.gz/1aaf9ffac63fd7c565e4ac1a610ff61e18b02980':
-    resolution:
-      {
-        tarball: https://codeload.github.com/styleshift/utils/tar.gz/1aaf9ffac63fd7c565e4ac1a610ff61e18b02980,
-      }
-    version: 0.0.1
 
   '@types/estree@1.0.6':
     resolution:
@@ -1546,9 +1536,6 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.29.1':
     optional: true
-
-  '@styleshift/utils@https://codeload.github.com/styleshift/utils/tar.gz/1aaf9ffac63fd7c565e4ac1a610ff61e18b02980':
-    {}
 
   '@types/estree@1.0.6': {}
 
