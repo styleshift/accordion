@@ -3,7 +3,7 @@ import type { VariantProps } from 'tailwind-variants';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import styles from './styles';
 
-type AccordionStyles = ReturnType<typeof styles>;
+export type AccordionStyles = ReturnType<typeof styles>;
 
 export type AccordionRootVariants = VariantProps<AccordionStyles['root']>;
 export type AccordionItemVariants = VariantProps<AccordionStyles['item']>;
