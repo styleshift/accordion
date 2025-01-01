@@ -96,7 +96,7 @@ export const Default: Story = {
     collapsible: true,
     transitions: true,
     unstyled: false,
-    defaultValue: '',
+    defaultValue: 'item-1',
   },
   parameters: {
     docs: {
