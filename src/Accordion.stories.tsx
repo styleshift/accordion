@@ -76,10 +76,17 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const AccordionTemplate = (items: typeof ACCORDION_ITEMS) => (
+const AccordionTemplate = (
+  items: typeof ACCORDION_ITEMS,
+  disabledItems?: string[],
+) => (
   <div>
     {items.map((item) => (
-      <Accordion.Item key={item.value} value={item.value}>
+      <Accordion.Item
+        key={item.value}
+        value={item.value}
+        disabled={disabledItems?.includes(item.value)}
+      >
         <Accordion.Trigger>{item.trigger}</Accordion.Trigger>
         <Accordion.Content>{item.content}</Accordion.Content>
       </Accordion.Item>
@@ -89,14 +96,7 @@ const AccordionTemplate = (items: typeof ACCORDION_ITEMS) => (
 
 export const Default: Story = {
   args: {
-    className: 'w-[350px]',
     children: AccordionTemplate(ACCORDION_ITEMS),
-    disabled: false,
-    multiple: true,
-    collapsible: true,
-    transitions: true,
-    unstyled: false,
-    defaultValue: 'item-1',
   },
   parameters: {
     docs: {

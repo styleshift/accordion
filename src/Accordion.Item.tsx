@@ -7,14 +7,15 @@ import useAccordion from './use-accordion';
 const AccordionItem = React.forwardRef<HTMLDivElement, AccordionItemProps>(
   ({ className, value, ariaLabel, ...props }, ref) => {
     const {
-      disabled,
+      disabled: globalDisabled,
       styles: { item },
     } = useAccordion();
+
     const label = ariaLabel || `Item ${value}`;
     return (
       <AccordionPrimitive.Item
         ref={ref}
-        disabled={disabled}
+        disabled={globalDisabled}
         className={cn(item(), className)}
         value={value}
         aria-label={label}
