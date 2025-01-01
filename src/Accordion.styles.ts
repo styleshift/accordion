@@ -21,8 +21,8 @@ export const accordion = tv({
         root: [''],
         item: ['py-2  border-b group '],
         trigger: [
-          'p-2 rounded font-medium text-sm flex items-center justify-between w-full',
-          'hover:underline flex flex-1 items-center justify-between ',
+          'p-2 rounded font-medium text-sm flex text-left items-center justify-start w-full',
+          'hover:underline flex-1 ',
           'focus-visible:outline-none focus-visible:ring-2',
           'focus-visible:ring-ring focus-visible:ring-offset-2',
           'disabled:cursor-not-allowed disabled:opacity-50',

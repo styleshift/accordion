@@ -4,6 +4,7 @@ import { Content, Item, Trigger } from './Slots';
 import { accordion } from './Accordion.styles';
 import { AccordionProps } from './types';
 import { AccordionContext } from './use-accordion';
+import { cn } from '@styleshift/utils';
 
 const AccordionRoot = ({
   className,

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import type { VariantProps } from 'tailwind-variants';
 import { accordion } from './Accordion.styles';
+import * as AccordionPrimitive from '@radix-ui/react-accordion';
 
 type AccordionStyles = ReturnType<typeof accordion>;
 
@@ -34,6 +35,10 @@ export type AccordionItemProps = BaseProps &
     value: string;
   };
 
-export type AccordionTriggerProps = BaseProps & AccordionTriggerVariants;
+export interface AccordionTriggerProps
+  extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger> {
+  ariaLabel?: string;
+  asChild?: boolean;
+}
 
 export type AccordionContentProps = BaseProps & AccordionContentVariants;

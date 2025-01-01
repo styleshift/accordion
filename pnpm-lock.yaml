@@ -13,7 +13,7 @@ importers:
     devDependencies:
       '@styleshift/utils':
         specifier: github:styleshift/utils
-        version: https://codeload.github.com/styleshift/utils/tar.gz/38e80e6930397558f2de782b3346bc0c6233dd65
+        version: https://codeload.github.com/styleshift/utils/tar.gz/c59319194975b10280dcc96b07caac286951eca6
       '@testing-library/jest-dom':
         specifier: ^6.6.3
         version: 6.6.3
@@ -899,10 +899,10 @@ packages:
         integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==,
       }
 
-  '@styleshift/utils@https://codeload.github.com/styleshift/utils/tar.gz/38e80e6930397558f2de782b3346bc0c6233dd65':
+  '@styleshift/utils@https://codeload.github.com/styleshift/utils/tar.gz/c59319194975b10280dcc96b07caac286951eca6':
     resolution:
       {
-        tarball: https://codeload.github.com/styleshift/utils/tar.gz/38e80e6930397558f2de782b3346bc0c6233dd65,
+        tarball: https://codeload.github.com/styleshift/utils/tar.gz/c59319194975b10280dcc96b07caac286951eca6,
       }
     version: 0.0.1
 
@@ -3962,7 +3962,7 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
-  '@styleshift/utils@https://codeload.github.com/styleshift/utils/tar.gz/38e80e6930397558f2de782b3346bc0c6233dd65':
+  '@styleshift/utils@https://codeload.github.com/styleshift/utils/tar.gz/c59319194975b10280dcc96b07caac286951eca6':
     {}
 
   '@testing-library/dom@10.4.0':
