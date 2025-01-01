@@ -1,10 +1,12 @@
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import { Content, Item, Trigger } from './Slots';
 import { accordion } from './Accordion.styles';
 import { AccordionProps } from './types';
 import { AccordionContext } from './use-accordion';
 import { cn } from '@styleshift/utils';
+import AccordionItem from './Accordion.Item';
+import AccordionTrigger from './Accordion.Trigger';
+import AccordionContent from './Accordion.Content';
 
 const AccordionRoot = ({
   className,
@@ -65,9 +67,9 @@ const AccordionRoot = ({
 AccordionRoot.displayName = 'Accordion';
 
 const Accordion = Object.assign(AccordionRoot, {
-  Item,
-  Trigger,
-  Content,
+  Item: AccordionItem,
+  Trigger: AccordionTrigger,
+  Content: AccordionContent,
 });
 
 export default Accordion;

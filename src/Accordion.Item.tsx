@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { cn } from '@styleshift/utils';
-import { AccordionItemProps } from '../types';
-import useAccordion from '../use-accordion';
+import { AccordionItemProps } from './types';
+import useAccordion from './use-accordion';
 
-const Item = React.forwardRef<HTMLDivElement, AccordionItemProps>(
+const AccordionItem = React.forwardRef<HTMLDivElement, AccordionItemProps>(
   ({ className, value, ariaLabel, ...props }, ref) => {
     const {
       disabled,
@@ -24,6 +24,6 @@ const Item = React.forwardRef<HTMLDivElement, AccordionItemProps>(
   },
 );
 
-Item.displayName = 'AccordionItem';
+AccordionItem.displayName = 'AccordionItem';
 
-export default Item;
+export default AccordionItem;

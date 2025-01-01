@@ -3,8 +3,8 @@ import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { ChevronDown } from 'lucide-react';
 
 import { cn } from '@styleshift/utils';
-import { AccordionTriggerProps } from '../types';
-import useAccordion from '../use-accordion';
+import { AccordionTriggerProps } from './types';
+import useAccordion from './use-accordion';
 
 const AccordionTrigger = React.forwardRef<
   React.ComponentRef<typeof AccordionPrimitive.Trigger>,
