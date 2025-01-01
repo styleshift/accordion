@@ -12,7 +12,7 @@ const AccordionRoot = ({
   disabled,
   transitions,
   collapsible,
-    separators,
+  separators,
   multiple,
   unstyled,
   ...props
@@ -23,12 +23,19 @@ const AccordionRoot = ({
     collapsible,
     multiple,
     unstyled,
-    separators
+    separators,
   });
 
   return (
     <AccordionContext.Provider
-      value={{ disabled, collapsible, multiple, transitions, unstyled, separators }}
+      value={{
+        disabled,
+        collapsible,
+        multiple,
+        transitions,
+        unstyled,
+        separators,
+      }}
     >
       {multiple ? (
         <AccordionPrimitive.Root
