@@ -7,7 +7,7 @@ import { AccordionTriggerProps } from '../types';
 import useAccordion from '../use-accordion';
 
 const AccordionTrigger = React.forwardRef<
-  React.ElementRef<typeof AccordionPrimitive.Trigger>,
+  React.ComponentRef<typeof AccordionPrimitive.Trigger>,
   AccordionTriggerProps
 >(({ className, children, ariaLabel, asChild = false, ...props }, ref) => {
   const {

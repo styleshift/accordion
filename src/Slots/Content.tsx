@@ -5,22 +5,25 @@ import { AccordionContentProps } from '../types';
 import useAccordion from '../use-accordion';
 
 const Content = React.forwardRef<HTMLDivElement, AccordionContentProps>(
-  ({ className, children, ariaLabel, ...props }, ref) => {
+  ({ className, children, ariaLabel, asChild, ...props }, ref) => {
     const {
       disabled,
       styles: { content },
     } = useAccordion();
     const label =
       ariaLabel || (typeof children === 'string' ? children : 'Content');
+
+    // If asChild is true, render children directly
+    const Wrapper = asChild ? React.Fragment : 'div';
+
     return (
       <AccordionPrimitive.Content
         ref={ref}
-        disabled={disabled}
         className={cn(content(), className)}
         aria-label={label}
         {...props}
       >
-        <div>{children}</div>
+        <Wrapper>{children}</Wrapper>
       </AccordionPrimitive.Content>
     );
   },

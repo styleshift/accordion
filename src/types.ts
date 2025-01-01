@@ -41,4 +41,8 @@ export interface AccordionTriggerProps
   asChild?: boolean;
 }
 
-export type AccordionContentProps = BaseProps & AccordionContentVariants;
+export interface AccordionContentProps
+  extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content> {
+  ariaLabel?: string;
+  asChild?: boolean;
+}
