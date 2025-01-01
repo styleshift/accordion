@@ -17,13 +17,13 @@
     "format": "prettier --write ."
   },
   "peerDependencies": {
-    "lucide-react": "^0.469.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "@types/react": "^19.0.2",
     "typescript": "^5.7.2"
   },
   "devDependencies": {
+    "lucide-react": "^0.469.0",
     "@radix-ui/react-accordion": "^1.2.2",
     "@styleshift/utils": "github:styleshift/utils",
     "prettier": "^3.4.2",
