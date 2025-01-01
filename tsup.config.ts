@@ -8,13 +8,5 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   treeshake: true,
-  external: [
-    'react',
-    'react-dom',
-    '@radix-ui/react-accordion',
-    'tailwind-variants',
-    'clsx',
-    'lucide-react',
-    'tailwind-merge',
-  ],
+  external: ['react', 'react-dom', '@radix-ui/react-accordion', 'lucide-react'],
 });
