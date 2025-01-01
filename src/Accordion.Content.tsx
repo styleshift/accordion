@@ -7,7 +7,7 @@ import { twMerge } from 'tailwind-merge';
 const AccordionContent = React.forwardRef<
   HTMLDivElement,
   AccordionContentProps
->(({ className, children, ariaLabel, asChild, ...props }, ref) => {
+>(({ className, children, asChild, ...props }, ref) => {
   const {
     transitions,
     styles: { content },
