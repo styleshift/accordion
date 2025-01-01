@@ -1,7 +1,7 @@
 {
-  "name": "@onboardvip/ui-accordion",
+  "name": "@styleshift/accordion",
   "version": "0.0.1",
-  "description": "Accordion component for Onboard VIP",
+  "description": "Accordion for StyleShift UI",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
