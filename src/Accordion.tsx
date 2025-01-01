@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import { accordion } from './Accordion.styles';
+import { accordion } from './styles';
 import { AccordionProps } from './types';
 import { AccordionContext } from './use-accordion';
 import { cn } from '@styleshift/utils';

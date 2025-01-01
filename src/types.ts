@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { VariantProps } from 'tailwind-variants';
-import { accordion } from './Accordion.styles';
+import { accordion } from './styles';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 
 type AccordionStyles = ReturnType<typeof accordion>;
