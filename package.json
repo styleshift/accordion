@@ -18,15 +18,15 @@
   },
   "peerDependencies": {
     "@types/react": "^19.0.2",
-    "lucide-react": "^0.469.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "typescript": "^5.7.2"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "lucide-react": "^0.469.0",
+    "typescript": "^5.7.2",
     "@radix-ui/react-accordion": "^1.2.2",
-    "@styleshift/utils": "github:styleshift/utils",
     "prettier": "^3.4.2",
+    "tailwind-variants": "^0.3.0",
     "tsup": "^8.3.5"
   }
 }

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { ChevronDown } from 'lucide-react';
-import { cn } from '@styleshift/utils';
 import { AccordionTriggerProps } from './types';
 import useAccordion from './use-accordion';
+import { cn } from 'tailwind-variants';
 
 const AccordionTrigger = React.forwardRef<
   React.ComponentRef<typeof AccordionPrimitive.Trigger>,
@@ -27,7 +27,7 @@ const AccordionTrigger = React.forwardRef<
       <AccordionPrimitive.Trigger
         ref={ref}
         aria-label={label}
-        className={cn(trigger(), className)}
+        className={cn(trigger(), className).toString()}
         disabled={disabled}
         {...props}
       >

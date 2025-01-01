@@ -8,7 +8,11 @@ export const AccordionContext = createContext<
   AccordionContextProps | undefined
 >(undefined);
 
-export default function useAccordion() {
+interface UseAccordionReturn extends AccordionContextProps {
+  styles: ReturnType<typeof styles>;
+}
+
+export default function useAccordion(): UseAccordionReturn {
   const context = useContext(AccordionContext);
 
   if (!context) {

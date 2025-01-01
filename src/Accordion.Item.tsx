@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import { cn } from '@styleshift/utils';
 import { AccordionItemProps } from './types';
 import useAccordion from './use-accordion';
+import { cn } from 'tailwind-variants';
 
 const AccordionItem = React.forwardRef<HTMLDivElement, AccordionItemProps>(
   ({ className, value, ariaLabel, ...props }, ref) => {
@@ -16,7 +16,7 @@ const AccordionItem = React.forwardRef<HTMLDivElement, AccordionItemProps>(
       <AccordionPrimitive.Item
         ref={ref}
         disabled={globalDisabled}
-        className={cn(item(), className)}
+        className={cn(item(), className).toString()}
         value={value}
         aria-label={label}
         {...props}

@@ -1,6 +1,6 @@
-import { tv } from '@styleshift/utils';
+import { tv } from 'tailwind-variants';
 
-export default tv({
+const styles = tv({
   slots: {
     root: '',
     item: '',
@@ -75,3 +75,5 @@ export default tv({
     },
   },
 });
+
+export default styles;
