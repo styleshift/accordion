@@ -2,6 +2,7 @@
   "name": "@styleshift/accordion",
   "version": "0.0.1",
   "description": "Accordion for StyleShift UI",
+  "author": "Jeroen Gerits <jeroen@gerits.email>",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -16,6 +17,11 @@
     "format": "prettier --write .",
     "clean": "rm -rf dist node_modules/.cache coverage"
   },
+  "peerDependencies": {
+    "lucide-react": "^0.469.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
   "devDependencies": {
     "@radix-ui/react-accordion": "^1.2.2",
     "@styleshift/utils": "github:styleshift/utils",
@@ -23,9 +29,5 @@
     "prettier": "^3.4.2",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
-  },
-  "author": "Jeroen Gerits <jeroen@gerits.email>",
-  "dependencies": {
-    "lucide-react": "^0.469.0"
   }
 }
