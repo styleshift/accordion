@@ -29,6 +29,9 @@ importers:
       '@styleshift/utils':
         specifier: github:styleshift/utils
         version: https://codeload.github.com/styleshift/utils/tar.gz/1aaf9ffac63fd7c565e4ac1a610ff61e18b02980
+      git:
+        specifier: link:github.com:styleshift/utils.git
+        version: link:github.com:styleshift/utils.git
       prettier:
         specifier: ^3.4.2
         version: 3.4.2

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import { accordion } from './styles';
+import styles from './styles';
 import { AccordionProps } from './types';
 import { AccordionContext } from './use-accordion';
 import { cn } from '@styleshift/utils';
@@ -19,7 +19,7 @@ const AccordionRoot = ({
   unstyled,
   ...props
 }: AccordionProps) => {
-  const { root } = accordion({
+  const { root } = styles({
     disabled,
     transitions,
     collapsible,

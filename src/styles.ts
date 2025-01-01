@@ -1,6 +1,6 @@
-import { tv } from 'tailwind-variants';
+import { tv } from '@styleshift/utils';
 
-export const accordion = tv({
+export default tv({
   slots: {
     root: '',
     item: '',
