@@ -9,23 +9,23 @@ const AccordionContent = React.forwardRef<
   AccordionContentProps
 >(({ className, children, ariaLabel, asChild, ...props }, ref) => {
   const {
-    disabled,
+    transitions,
     styles: { content },
   } = useAccordion();
-  const label =
-    ariaLabel || (typeof children === 'string' ? children : 'AccordionContent');
-
-  // If asChild is true, render children directly
-  const Wrapper = asChild ? React.Fragment : 'div';
 
   return (
     <AccordionPrimitive.Content
       ref={ref}
-      className={twMerge(content(), className).toString()}
-      aria-label={label}
+      className={twMerge(
+        content(),
+        transitions && 'transition-all duration-300',
+        className,
+      )}
       {...props}
     >
-      <Wrapper>{children}</Wrapper>
+      <div className={transitions ? 'pb-4 pt-0' : ''}>
+        {asChild ? children : <div>{children}</div>}
+      </div>
     </AccordionPrimitive.Content>
   );
 });

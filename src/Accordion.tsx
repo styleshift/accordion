@@ -8,61 +8,73 @@ import AccordionTrigger from './Accordion.Trigger';
 import AccordionContent from './Accordion.Content';
 import { twMerge } from 'tailwind-merge';
 
-const AccordionRoot = ({
-  className,
-  ariaLabel,
-  disabled,
-  transitions,
-  collapsible,
-  separators,
-  multiple,
-  unstyled,
-  ...props
-}: AccordionProps) => {
-  const { root } = styles({
-    disabled,
-    transitions,
-    collapsible,
-    multiple,
-    unstyled,
-    separators,
-  });
+const AccordionRoot = React.forwardRef<
+  React.ComponentRef<typeof AccordionPrimitive.Root>,
+  AccordionProps
+>(
+  (
+    {
+      className,
+      ariaLabel = 'Accordion',
+      disabled = false,
+      transitions = true,
+      collapsible = true,
+      separators = true,
+      multiple = false,
+      unstyled = false,
+      defaultValue,
+      ...props
+    },
+    ref,
+  ) => {
+    const { root } = styles({
+      disabled,
+      transitions,
+      collapsible,
+      multiple,
+      unstyled,
+      separators,
+    });
 
-  return (
-    <AccordionContext.Provider
-      value={{
-        disabled,
-        collapsible,
-        multiple,
-        transitions,
-        unstyled,
-        separators,
-      }}
-    >
-      {multiple ? (
-        <AccordionPrimitive.Root
-          {...(props as Omit<typeof props, 'defaultValue'>)}
-          type="multiple"
-          defaultValue={props.defaultValue ? [props.defaultValue] : undefined}
-          disabled={disabled}
-          className={twMerge(root(), className) && ''}
-          aria-label={ariaLabel}
-          role="region"
-        />
-      ) : (
-        <AccordionPrimitive.Root
-          {...props}
-          type="single"
-          collapsible={collapsible}
-          disabled={disabled}
-          className={twMerge(root(), className).toString()}
-          aria-label={ariaLabel}
-          role="region"
-        />
-      )}
-    </AccordionContext.Provider>
-  );
-};
+    const commonProps = {
+      ref,
+      disabled,
+      className: twMerge(root(), className),
+      'aria-label': ariaLabel,
+      role: 'region',
+    };
+
+    return (
+      <AccordionContext.Provider
+        value={{
+          disabled,
+          collapsible,
+          multiple,
+          transitions,
+          unstyled,
+          separators,
+        }}
+      >
+        {multiple ? (
+          <AccordionPrimitive.Root
+            {...props}
+            type="multiple"
+            defaultValue={defaultValue as string[]}
+            {...commonProps}
+          />
+        ) : (
+          <AccordionPrimitive.Root
+            {...props}
+            type="single"
+            defaultValue={defaultValue as string}
+            collapsible={collapsible}
+            {...commonProps}
+          />
+        )}
+      </AccordionContext.Provider>
+    );
+  },
+);
 
 AccordionRoot.displayName = 'Accordion';
 

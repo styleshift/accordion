@@ -12,29 +12,20 @@ const AccordionTrigger = React.forwardRef<
     disabled,
     styles: { trigger, chevron },
   } = useAccordion();
-  const label =
-    ariaLabel || (typeof children === 'string' ? children : 'Trigger');
-
-  const childrenWrapper = asChild ? (
-    children
-  ) : (
-    <div className="flex-1">{children}</div>
-  );
 
   return (
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
         ref={ref}
-        aria-label={label}
-        className={twMerge(trigger(), className).toString()}
+        aria-label={ariaLabel}
+        className={twMerge(trigger(), className)}
         disabled={disabled}
         {...props}
       >
-        {childrenWrapper}
+        {asChild ? children : <div className="flex-1">{children}</div>}
         <ChevronDown
-          className={chevron()}
+          className={twMerge(chevron(), '[&[data-state=open]>svg]:rotate-180')}
           aria-hidden="true"
-          role="presentation"
         />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>

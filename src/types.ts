@@ -28,7 +28,9 @@ export type BaseProps = {
 
 export type AccordionProps = BaseProps &
   AccordionRootVariants &
-  AccordionContextProps;
+  AccordionContextProps & {
+    defaultValue?: string | string[];
+  };
 
 export type AccordionItemProps = BaseProps &
   AccordionItemVariants & {

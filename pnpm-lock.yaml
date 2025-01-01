@@ -8,27 +8,36 @@ importers:
   .:
     dependencies:
       '@types/react':
-        specifier: ^19.0.2
+        specifier: ^18.2.0
         version: 19.0.2
       react:
-        specifier: ^19.0.0
+        specifier: ^18.2.0
         version: 19.0.0
       react-dom:
-        specifier: ^19.0.0
+        specifier: ^18.2.0
         version: 19.0.0(react@19.0.0)
     devDependencies:
       '@radix-ui/react-accordion':
         specifier: ^1.2.2
         version: 1.2.2(@types/react@19.0.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.17.11
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.1
       lucide-react:
         specifier: ^0.469.0
         version: 0.469.0(react@19.0.0)
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
+      tailwind-merge:
+        specifier: ^2.0.0
+        version: 2.6.0
       tailwind-variants:
-        specifier: ^0.3.0
-        version: 0.3.0(tailwindcss@3.4.17)
+        specifier: ^0.1.0
+        version: 0.1.20(tailwindcss@3.4.17)
       tsup:
         specifier: ^8.3.5
         version: 8.3.5(jiti@1.21.7)(postcss@8.4.49)(typescript@5.7.2)(yaml@2.7.0)
@@ -677,6 +686,12 @@ packages:
         integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==,
       }
 
+  '@types/node@20.17.11':
+    resolution:
+      {
+        integrity: sha512-Ept5glCK35R8yeyIeYlRIZtX6SLRyqMhOFTgj5SOkMpLTdw3SEHI9fHx60xaUZ+V1aJxQJODE+7/j5ocZydYTg==,
+      }
+
   '@types/react@19.0.2':
     resolution:
       {
@@ -792,6 +807,19 @@ packages:
         integrity: sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==,
       }
     engines: { node: '>= 14.16.0' }
+
+  class-variance-authority@0.7.1:
+    resolution:
+      {
+        integrity: sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==,
+      }
+
+  clsx@2.1.1:
+    resolution:
+      {
+        integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==,
+      }
+    engines: { node: '>=6' }
 
   color-convert@2.0.1:
     resolution:
@@ -1467,16 +1495,22 @@ packages:
       }
     engines: { node: '>= 0.4' }
 
+  tailwind-merge@1.14.0:
+    resolution:
+      {
+        integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==,
+      }
+
   tailwind-merge@2.6.0:
     resolution:
       {
         integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==,
       }
 
-  tailwind-variants@0.3.0:
+  tailwind-variants@0.1.20:
     resolution:
       {
-        integrity: sha512-ho2k5kn+LB1fT5XdNS3Clb96zieWxbStE9wNLK7D0AV64kdZMaYzAKo0fWl6fXLPY99ffF9oBJnIj5escEl/8A==,
+        integrity: sha512-AMh7x313t/V+eTySKB0Dal08RHY7ggYK0MSn/ad8wKWOrDUIzyiWNayRUm2PIJ4VRkvRnfNuyRuKbLV3EN+ewQ==,
       }
     engines: { node: '>=16.x', pnpm: '>=7.x' }
     peerDependencies:
@@ -1571,6 +1605,12 @@ packages:
       }
     engines: { node: '>=14.17' }
     hasBin: true
+
+  undici-types@6.19.8:
+    resolution:
+      {
+        integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==,
+      }
 
   util-deprecate@1.0.2:
     resolution:
@@ -1910,6 +1950,10 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
+  '@types/node@20.17.11':
+    dependencies:
+      undici-types: 6.19.8
+
   '@types/react@19.0.2':
     dependencies:
       csstype: 3.1.3
@@ -1969,6 +2013,12 @@ snapshots:
   chokidar@4.0.3:
     dependencies:
       readdirp: 4.0.2
+
+  class-variance-authority@0.7.1:
+    dependencies:
+      clsx: 2.1.1
+
+  clsx@2.1.1: {}
 
   color-convert@2.0.1:
     dependencies:
@@ -2332,11 +2382,13 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
+  tailwind-merge@1.14.0: {}
+
   tailwind-merge@2.6.0: {}
 
-  tailwind-variants@0.3.0(tailwindcss@3.4.17):
+  tailwind-variants@0.1.20(tailwindcss@3.4.17):
     dependencies:
-      tailwind-merge: 2.6.0
+      tailwind-merge: 1.14.0
       tailwindcss: 3.4.17
 
   tailwindcss@3.4.17:
@@ -2421,6 +2473,8 @@ snapshots:
       - yaml
 
   typescript@5.7.2: {}
+
+  undici-types@6.19.8: {}
 
   util-deprecate@1.0.2: {}
 
