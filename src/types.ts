@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type { VariantProps } from 'tailwind-variants';
+import { type VariantProps } from 'tailwind-variants';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import styles from './styles';
 
