@@ -9,8 +9,6 @@ export type AccordionItemVariants = VariantProps<AccordionStyles['item']>;
 export type AccordionTriggerVariants = VariantProps<AccordionStyles['trigger']>;
 export type AccordionContentVariants = VariantProps<AccordionStyles['content']>;
 
-export type AccordionVariant = 'default' | 'unstyled';
-
 export type AccordionContextProps = {
   unstyled?: boolean;
   collapsible?: boolean;
@@ -28,37 +26,14 @@ export type BaseProps = {
 };
 
 export type AccordionProps = BaseProps &
-  AccordionRootVariants & {
-    collapsible?: boolean;
-    variant?: AccordionVariant;
-    disabled?: boolean;
-    transitions?: boolean;
-    defaultValue?: string;
-  };
+  AccordionRootVariants &
+  AccordionContextProps;
 
 export type AccordionItemProps = BaseProps &
   AccordionItemVariants & {
     value: string;
   };
 
-export type AccordionTriggerProps = BaseProps &
-  AccordionTriggerVariants & {
-    hideChevron?: boolean;
-  };
+export type AccordionTriggerProps = BaseProps & AccordionTriggerVariants;
 
 export type AccordionContentProps = BaseProps & AccordionContentVariants;
-
-export type AccordionSlots = {
-  base?: string | string[];
-  item?: string | string[];
-  trigger?: string | string[];
-  content?: string | string[];
-  chevron?: string | string[];
-};
-
-export type AccordionTheme = {
-  slots: AccordionSlots;
-  variants?: Record<string, Record<string, string | string[]>>;
-  defaultVariants?: Record<string, string>;
-  extend?: AccordionTheme;
-};

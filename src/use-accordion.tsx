@@ -1,9 +1,7 @@
 'use client';
 
-import { useContext } from 'react';
+import { createContext, useContext } from 'react';
 import { accordion } from './Accordion.styles';
-
-import { createContext } from 'react';
 import { AccordionContextProps } from './types';
 
 export const AccordionContext = createContext<

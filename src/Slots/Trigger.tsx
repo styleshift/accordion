@@ -8,7 +8,7 @@ import useAccordion from '../use-accordion';
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   AccordionTriggerProps
->(({ className, children, ariaLabel, hideChevron, ...props }, ref) => {
+>(({ className, children, ariaLabel, ...props }, ref) => {
   const {
     disabled,
     styles: { trigger, chevron },
@@ -25,13 +25,11 @@ const AccordionTrigger = React.forwardRef<
         {...props}
       >
         <div>{children}</div>
-        {!hideChevron && (
-          <ChevronDown
-            className={chevron()}
-            aria-hidden="true"
-            role="presentation"
-          />
-        )}
+        <ChevronDown
+          className={chevron()}
+          aria-hidden="true"
+          role="presentation"
+        />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );

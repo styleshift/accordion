@@ -3,6 +3,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import Accordion from './Accordion';
 import '@testing-library/jest-dom';
 import { AccordionProps } from './types';
+
 describe('Accordion', () => {
   const DEFAULT_PROPS = {
     type: 'single' as const,
@@ -68,22 +69,6 @@ describe('Accordion', () => {
     expect(screen.getByLabelText('Test Accordion')).toBeInTheDocument();
     expect(screen.getByLabelText('First section')).toBeInTheDocument();
     expect(screen.getByLabelText('Toggle first section')).toBeInTheDocument();
-  });
-
-  it('supports hiding chevron icon', () => {
-    render(
-      <TestAccordion>
-        <Accordion.Item value="item-1">
-          <Accordion.Trigger hideChevron data-testid="trigger">
-            First Section
-          </Accordion.Trigger>
-          <Accordion.Content>First Content</Accordion.Content>
-        </Accordion.Item>
-      </TestAccordion>,
-    );
-
-    const trigger = screen.getByTestId('trigger');
-    expect(trigger.querySelector('svg')).not.toBeInTheDocument();
   });
 
   it('provides correct default aria-labels', () => {
