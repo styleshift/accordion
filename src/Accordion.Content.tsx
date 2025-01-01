@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { AccordionContentProps } from './types';
 import useAccordion from './use-accordion';
-import { cn } from 'tailwind-variants';
+import { twMerge } from 'tailwind-merge';
 
 const AccordionContent = React.forwardRef<
   HTMLDivElement,
@@ -21,7 +21,7 @@ const AccordionContent = React.forwardRef<
   return (
     <AccordionPrimitive.Content
       ref={ref}
-      className={cn(content(), className).toString()}
+      className={twMerge(content(), className).toString()}
       aria-label={label}
       {...props}
     >

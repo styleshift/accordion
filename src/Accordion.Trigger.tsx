@@ -3,8 +3,7 @@ import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { ChevronDown } from 'lucide-react';
 import { AccordionTriggerProps } from './types';
 import useAccordion from './use-accordion';
-import { cn } from 'tailwind-variants';
-
+import { twMerge } from 'tailwind-merge';
 const AccordionTrigger = React.forwardRef<
   React.ComponentRef<typeof AccordionPrimitive.Trigger>,
   AccordionTriggerProps
@@ -27,7 +26,7 @@ const AccordionTrigger = React.forwardRef<
       <AccordionPrimitive.Trigger
         ref={ref}
         aria-label={label}
-        className={cn(trigger(), className).toString()}
+        className={twMerge(trigger(), className).toString()}
         disabled={disabled}
         {...props}
       >

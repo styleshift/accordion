@@ -6,7 +6,7 @@ import { AccordionContext } from './use-accordion';
 import AccordionItem from './Accordion.Item';
 import AccordionTrigger from './Accordion.Trigger';
 import AccordionContent from './Accordion.Content';
-import { cn } from 'tailwind-variants';
+import { twMerge } from 'tailwind-merge';
 
 const AccordionRoot = ({
   className,
@@ -45,7 +45,7 @@ const AccordionRoot = ({
           type="multiple"
           defaultValue={props.defaultValue ? [props.defaultValue] : undefined}
           disabled={disabled}
-          className={cn(root(), className) && ''}
+          className={twMerge(root(), className) && ''}
           aria-label={ariaLabel}
           role="region"
         />
@@ -55,7 +55,7 @@ const AccordionRoot = ({
           type="single"
           collapsible={collapsible}
           disabled={disabled}
-          className={cn(root(), className).toString()}
+          className={twMerge(root(), className).toString()}
           aria-label={ariaLabel}
           role="region"
         />
