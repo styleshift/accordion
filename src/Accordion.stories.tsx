@@ -25,6 +25,7 @@ const ACCORDION_ITEMS = [
 
 const meta = {
   title: 'Accordion',
+  // @ts-ignore
   component: Accordion,
   tags: ['autodocs'],
   parameters: {
@@ -36,6 +37,7 @@ const meta = {
     },
   },
   argTypes: {
+    // @ts-ignore
     disabled: {
       control: { type: 'boolean' },
       description: 'Disables all interactions',

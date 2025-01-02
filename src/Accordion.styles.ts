@@ -29,7 +29,7 @@ const styles = tv({
           'disabled:cursor-not-allowed disabled:opacity-50',
           '[&[data-state=open]>svg]:rotate-180',
         ],
-        content: ['px-4 pb-2'],
+        content: ['px-4 pb-4'],
         chevron: [
           'duration-300 size-4 opacity-50 group-hover:opacity-100 shrink-0',
         ],
