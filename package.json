@@ -23,6 +23,13 @@
     "tailwind-merge": "^2.0.0",
     "tailwind-variants": "^0.1.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/styleshift/accordion"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "lucide-react": "^0.469.0",
     "typescript": "^5.7.2",

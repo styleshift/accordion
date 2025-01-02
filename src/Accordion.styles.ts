@@ -54,10 +54,14 @@ const styles = tv({
     },
     transitions: {
       true: {
-        chevron: 'transition-all duration-300',
-        trigger: 'transition-all duration-300 ',
-        content:
-          'transition-all duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+        chevron: 'transition-transform duration-200 ease-out',
+        trigger: 'transition-colors duration-200',
+        content: [
+          'transition-all duration-200 ease-out',
+          'data-[state=closed]:animate-accordion-up',
+          'data-[state=open]:animate-accordion-down',
+          'overflow-hidden',
+        ],
       },
       false: {
         chevron: 'transition-none',

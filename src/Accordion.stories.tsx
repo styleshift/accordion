@@ -36,11 +36,6 @@ const meta = {
     },
   },
   argTypes: {
-    unstyled: {
-      control: 'boolean',
-      description: 'When false, no styles will be applied',
-      defaultValue: false,
-    },
     disabled: {
       control: 'boolean',
       description:
@@ -59,6 +54,11 @@ const meta = {
       control: 'boolean',
       description:
         'When false, does not animate or transitions when collapsing or expanding and item.',
+    },
+    unstyled: {
+      control: 'boolean',
+      description: 'When false, no styles will be applied',
+      defaultValue: false,
     },
     className: {
       table: {
