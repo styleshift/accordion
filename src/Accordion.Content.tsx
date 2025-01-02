@@ -23,9 +23,7 @@ const AccordionContent = React.forwardRef<
       )}
       {...props}
     >
-      <div className={transitions ? 'pb-4 pt-0' : ''}>
-        {asChild ? children : <div>{children}</div>}
-      </div>
+      {asChild ? children : <div>{children}</div>}
     </AccordionPrimitive.Content>
   );
 });

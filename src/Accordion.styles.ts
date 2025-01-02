@@ -19,7 +19,7 @@ const styles = tv({
     unstyled: {
       false: {
         root: [''],
-        item: ['py-2  border-b group '],
+        item: ['py-2 border-b group '],
         trigger: [
           'p-2 rounded font-medium text-sm flex text-left items-center justify-start w-full',
           'hover:underline flex-1 ',
@@ -28,7 +28,7 @@ const styles = tv({
           'disabled:cursor-not-allowed disabled:opacity-50',
           '[&[data-state=open]>svg]:rotate-180',
         ],
-        content: ['p-2 font-light text-sm '],
+        content: ['px-2 pt-2 font-light text-sm '],
         chevron: [
           'duration-300 size-4 opacity-50 group-hover:opacity-100 shrink-0',
         ],
