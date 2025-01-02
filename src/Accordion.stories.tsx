@@ -45,6 +45,22 @@ const meta = {
         defaultValue: { summary: false },
       },
     },
+    separators: {
+      control: { type: 'boolean' },
+      description: 'Shows item dividers',
+      defaultValue: true,
+      table: {
+        defaultValue: { summary: true },
+      },
+    },
+    border: {
+      control: { type: 'boolean' },
+      description: 'Shows outer border',
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false },
+      },
+    },
     collapsible: {
       control: { type: 'boolean' },
       description: 'Allows collapsing the last open item (single mode)',
@@ -67,22 +83,6 @@ const meta = {
       defaultValue: true,
       table: {
         defaultValue: { summary: true },
-      },
-    },
-    separators: {
-      control: { type: 'boolean' },
-      description: 'Shows item dividers',
-      defaultValue: true,
-      table: {
-        defaultValue: { summary: true },
-      },
-    },
-    border: {
-      control: { type: 'boolean' },
-      description: 'Shows outer border',
-      defaultValue: false,
-      table: {
-        defaultValue: { summary: false },
       },
     },
     unstyled: {
@@ -136,6 +136,34 @@ export const Default: Story = {
   },
 };
 
+export const WithBorder: Story = {
+  args: {
+    ...Default.args,
+    border: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Shows outer border.',
+      },
+    },
+  },
+};
+
+export const WithoutSeparators: Story = {
+  args: {
+    separators: false,
+    ...Default.args,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'No dividers between items.',
+      },
+    },
+  },
+};
+
 export const Disabled: Story = {
   args: {
     ...Default.args,
@@ -174,33 +202,6 @@ export const NonCollapsible: Story = {
     docs: {
       description: {
         story: 'One item must always remain open.',
-      },
-    },
-  },
-};
-export const WithBorder: Story = {
-  args: {
-    ...Default.args,
-    border: true,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Shows outer border.',
-      },
-    },
-  },
-};
-
-export const WithoutSeparators: Story = {
-  args: {
-    separators: false,
-    ...Default.args,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'No dividers between items.',
       },
     },
   },
