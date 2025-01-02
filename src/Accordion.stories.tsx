@@ -55,15 +55,15 @@ const meta = {
       description:
         'When false, does not animate or transitions when collapsing or expanding and item.',
     },
-    unstyled: {
-      control: 'boolean',
-      description: 'When false, no styles will be applied',
-      defaultValue: false,
-    },
     separators: {
       control: 'boolean',
       description: 'When true, shows separators between items',
       defaultValue: true,
+    },
+    unstyled: {
+      control: 'boolean',
+      description: 'When false, no styles will be applied',
+      defaultValue: false,
     },
     className: {
       table: {
@@ -102,13 +102,6 @@ const AccordionTemplate = (
 export const Default: Story = {
   args: {
     children: AccordionTemplate(ACCORDION_ITEMS),
-    separators: true,
-    unstyled: false,
-    transitions: true,
-    multiple: true,
-    collapsible: true,
-    disabled: false,
-    border: true,
   },
   parameters: {
     docs: {

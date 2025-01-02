@@ -4,6 +4,7 @@ import { ChevronDown } from 'lucide-react';
 import { AccordionTriggerProps } from './types';
 import useAccordion from './use-accordion';
 import { twMerge } from 'tailwind-merge';
+
 const AccordionTrigger = React.forwardRef<
   React.ComponentRef<typeof AccordionPrimitive.Trigger>,
   AccordionTriggerProps

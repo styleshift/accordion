@@ -19,7 +19,7 @@ const AccordionRoot = React.forwardRef<
       disabled = false,
       transitions = true,
       collapsible = true,
-      separators = false,
+      separators = true,
       multiple = false,
       unstyled = false,
       defaultValue,

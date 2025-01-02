@@ -3,6 +3,7 @@ import * as AccordionPrimitive from '@radix-ui/react-accordion';
 import { AccordionItemProps } from './types';
 import useAccordion from './use-accordion';
 import { twMerge } from 'tailwind-merge';
+
 const AccordionItem = React.forwardRef<HTMLDivElement, AccordionItemProps>(
   ({ className, value, ariaLabel, ...props }, ref) => {
     const {
