@@ -23,6 +23,8 @@ const AccordionRoot = React.forwardRef<
       multiple = false,
       unstyled = false,
       defaultValue,
+      value,
+      onValueChange,
       ...props
     },
     ref,
@@ -59,6 +61,8 @@ const AccordionRoot = React.forwardRef<
           <AccordionPrimitive.Root
             {...props}
             type="multiple"
+            value={value as string[]}
+            onValueChange={onValueChange}
             defaultValue={defaultValue as string[]}
             {...commonProps}
           />
@@ -66,6 +70,8 @@ const AccordionRoot = React.forwardRef<
           <AccordionPrimitive.Root
             {...props}
             type="single"
+            value={value as string}
+            onValueChange={onValueChange}
             defaultValue={defaultValue as string}
             collapsible={collapsible}
             {...commonProps}

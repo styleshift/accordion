@@ -30,6 +30,8 @@ export type AccordionProps = BaseProps &
   AccordionRootVariants &
   AccordionContextProps & {
     defaultValue?: string | string[];
+    value?: string | string[];
+    onValueChange?: (value: string | string[]) => void | Promise<void>;
   };
 
 export type AccordionItemProps = BaseProps &

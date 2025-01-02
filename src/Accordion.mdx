@@ -1,17 +1,32 @@
 import { Meta, Story, Canvas, Controls, Stories } from '@storybook/blocks';
 import * as AccordionStories from './Accordion.stories';
 
-<Meta of={AccordionStories} title="Components/Accordion" tags={['autodocs']} />
+<Meta
+  of={AccordionStories}
+  title="Components/Accordion"
+  tags={['autodocs']}
+  parameters={{
+    componentSubtitle: 'An expandable/collapsible content container',
+  }}
+/>
 
 # Accordion
 
 A vertically stacked set of interactive headings that each reveal a section of content.
 
+## Usage
+
+The Accordion component is useful for:
+
+- Organizing related content into collapsible sections
+- Reducing visual clutter in content-heavy interfaces
+- Creating FAQ sections or similar expandable content areas
+
+## Example
+
 <Canvas>
   <Story of={AccordionStories.Default} />
 </Canvas>
-
-## Props
 
 <Controls />
 
