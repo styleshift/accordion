@@ -18,17 +18,17 @@ const styles = tv({
   variants: {
     unstyled: {
       false: {
-        root: [''],
-        item: ['py-2 border-b group '],
+        root: ['border border-border rounded-lg'],
+        item: [' border-b group last:border-b-0'],
         trigger: [
-          'p-2 rounded font-medium text-sm flex text-left items-center justify-start w-full',
+          'px-4 py-3 rounded  flex text-left items-center justify-start w-full',
           'hover:underline flex-1 ',
           'focus-visible:outline-none focus-visible:ring-2',
           'focus-visible:ring-ring focus-visible:ring-offset-2',
           'disabled:cursor-not-allowed disabled:opacity-50',
           '[&[data-state=open]>svg]:rotate-180',
         ],
-        content: ['px-2 pt-2 font-light text-sm '],
+        content: ['px-4 pb-2'],
         chevron: [
           'duration-300 size-4 opacity-50 group-hover:opacity-100 shrink-0',
         ],

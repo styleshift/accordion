@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import Accordion from './Accordion';
 
@@ -60,6 +60,11 @@ const meta = {
       description: 'When false, no styles will be applied',
       defaultValue: false,
     },
+    separators: {
+      control: 'boolean',
+      description: 'When true, shows separators between items',
+      defaultValue: true,
+    },
     className: {
       table: {
         disable: true,
@@ -97,6 +102,12 @@ const AccordionTemplate = (
 export const Default: Story = {
   args: {
     children: AccordionTemplate(ACCORDION_ITEMS),
+    separators: true,
+    unstyled: false,
+    transitions: true,
+    multiple: true,
+    collapsible: true,
+    disabled: false,
   },
   parameters: {
     docs: {
