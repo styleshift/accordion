@@ -22,7 +22,7 @@ const AccordionRoot = React.forwardRef<
       separators = true,
       multiple = false,
       unstyled = false,
-      border = true,
+      border = false,
       defaultValue,
       value,
       ...props
@@ -42,7 +42,7 @@ const AccordionRoot = React.forwardRef<
     const commonProps = {
       ref,
       disabled,
-      className: twMerge(root({ disabled }), className),
+      className: twMerge(root({ border }), className),
       'aria-label': ariaLabel,
       role: 'region',
     };
@@ -53,6 +53,7 @@ const AccordionRoot = React.forwardRef<
           disabled,
           collapsible,
           multiple,
+          border,
           transitions,
           unstyled,
           separators,

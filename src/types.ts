@@ -11,6 +11,7 @@ export type AccordionTriggerVariants = VariantProps<AccordionStyles['trigger']>;
 export type AccordionContentVariants = VariantProps<AccordionStyles['content']>;
 
 export type AccordionContextProps = {
+  border?: boolean;
   unstyled?: boolean;
   collapsible?: boolean;
   disabled?: boolean;

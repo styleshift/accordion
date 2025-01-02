@@ -14,7 +14,7 @@ const styles = tv({
     collapsible: true,
     separators: true,
     unstyled: false,
-    border: true,
+    border: false,
   },
   variants: {
     unstyled: {
@@ -22,14 +22,14 @@ const styles = tv({
         root: ['border rounded-lg '],
         item: [' border-b group last:border-b-0'],
         trigger: [
-          'px-4 py-3 text-sm rounded font-medium flex text-left items-center justify-start w-full',
+          'px-1 py-2 text-sm rounded font-medium flex text-left items-center justify-start w-full',
           'hover:underline flex-1 ',
           'focus-visible:outline-none focus-visible:ring-2',
           'focus-visible:ring-ring focus-visible:ring-offset-2',
           'disabled:cursor-not-allowed disabled:opacity-50',
           '[&[data-state=open]>svg]:rotate-180',
         ],
-        content: ['px-4 pb-4 text-sm text-muted-foreground'],
+        content: ['px-1 pb-2 text-sm text-muted-foreground'],
         chevron: [
           'duration-300 size-4 opacity-50 group-hover:opacity-100 shrink-0',
         ],
@@ -76,6 +76,7 @@ const styles = tv({
       },
       true: {
         root: 'border-border',
+        trigger: 'px-3',
       },
     },
     collapsible: {

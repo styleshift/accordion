@@ -80,9 +80,9 @@ const meta = {
     border: {
       control: { type: 'boolean' },
       description: 'Shows outer border',
-      defaultValue: true,
+      defaultValue: false,
       table: {
-        defaultValue: { summary: true },
+        defaultValue: { summary: false },
       },
     },
     unstyled: {
@@ -178,15 +178,15 @@ export const NonCollapsible: Story = {
     },
   },
 };
-export const WithoutBorder: Story = {
+export const WithBorder: Story = {
   args: {
     ...Default.args,
-    border: false,
+    border: true,
   },
   parameters: {
     docs: {
       description: {
-        story: 'No outer border.',
+        story: 'Shows outer border.',
       },
     },
   },
