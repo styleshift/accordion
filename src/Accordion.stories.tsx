@@ -31,38 +31,36 @@ const meta = {
     docs: {
       description: {
         component:
-          'A vertically stacked set of interactive headings that each reveal a section of content.',
+          'Expandable content sections with keyboard navigation and ARIA support.',
       },
     },
   },
   argTypes: {
     disabled: {
       control: 'boolean',
-      description:
-        'When true, prevents the user from interacting with the accordion',
+      description: 'Disables all interactions',
     },
     collapsible: {
       control: 'boolean',
-      description:
-        'When true, prevents the user from collapsing an item, this only works on "single" type.',
+      description: 'Allows collapsing the last open item (single mode)',
     },
     multiple: {
       control: 'boolean',
-      description: 'When true, multiple items can be opened simultaneously',
+      description: 'Allows multiple open items',
     },
     transitions: {
       control: 'boolean',
-      description:
-        'When false, does not animate or transitions when collapsing or expanding and item.',
+      description: 'Enables animations',
+      defaultValue: true,
     },
     separators: {
       control: 'boolean',
-      description: 'When true, shows separators between items',
+      description: 'Shows item dividers',
       defaultValue: true,
     },
     unstyled: {
       control: 'boolean',
-      description: 'When false, no styles will be applied',
+      description: 'Removes default styling',
       defaultValue: false,
     },
     className: {
@@ -106,8 +104,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'The default accordion configuration with multiple selection, transitions, and collapsible items enabled.',
+        story: 'Default configuration with multiple open items and animations.',
       },
     },
   },
@@ -121,7 +118,7 @@ export const Disabled: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'A disabled accordion where user interactions are prevented.',
+        story: `A fully disabled accordion state`,
       },
     },
   },
@@ -135,7 +132,7 @@ export const SingleSelection: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'An accordion that only allows one item to be open at a time.',
+        story: 'Only one item can be open at a time.',
       },
     },
   },
@@ -150,8 +147,7 @@ export const NonCollapsible: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'A single-selection accordion where the open item cannot be collapsed.',
+        story: 'One item must always remain open.',
       },
     },
   },
@@ -165,8 +161,7 @@ export const WithoutTransitions: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'An accordion without animation transitions when expanding or collapsing items.',
+        story: 'Instant state changes without animations.',
       },
     },
   },
@@ -180,7 +175,7 @@ export const WithoutBorder: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'An accordion without a border',
+        story: 'No outer border.',
       },
     },
   },
@@ -194,8 +189,7 @@ export const WithoutSeparators: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'An accordion with visual separators between items using border utilities.',
+        story: 'No dividers between items.',
       },
     },
   },
@@ -209,8 +203,7 @@ export const Unstyled: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'A bare accordion without any default styling applied, useful for custom styling implementations.',
+        story: 'Base component without styling.',
       },
     },
   },
