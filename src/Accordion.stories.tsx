@@ -108,6 +108,7 @@ export const Default: Story = {
     multiple: true,
     collapsible: true,
     disabled: false,
+    border: true,
   },
   parameters: {
     docs: {
@@ -173,6 +174,20 @@ export const WithoutTransitions: Story = {
       description: {
         story:
           'An accordion without animation transitions when expanding or collapsing items.',
+      },
+    },
+  },
+};
+
+export const WithoutBorder: Story = {
+  args: {
+    ...Default.args,
+    border: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'An accordion without a border',
       },
     },
   },
