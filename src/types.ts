@@ -31,7 +31,7 @@ export type AccordionProps = BaseProps &
   AccordionContextProps & {
     defaultValue?: string | string[];
     value?: string | string[];
-    onValueChange?: (value: string | string[]) => void | Promise<void>;
+    disabled?: boolean;
   };
 
 export type AccordionItemProps = BaseProps &

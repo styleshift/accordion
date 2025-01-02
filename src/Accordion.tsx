@@ -22,9 +22,9 @@ const AccordionRoot = React.forwardRef<
       separators = true,
       multiple = false,
       unstyled = false,
+      border = true,
       defaultValue,
       value,
-      onValueChange,
       ...props
     },
     ref,
@@ -36,12 +36,13 @@ const AccordionRoot = React.forwardRef<
       multiple,
       unstyled,
       separators,
+      border,
     });
 
     const commonProps = {
       ref,
       disabled,
-      className: twMerge(root(), className),
+      className: twMerge(root({ disabled }), className),
       'aria-label': ariaLabel,
       role: 'region',
     };
@@ -62,7 +63,6 @@ const AccordionRoot = React.forwardRef<
             {...props}
             type="multiple"
             value={value as string[]}
-            onValueChange={onValueChange}
             defaultValue={defaultValue as string[]}
             {...commonProps}
           />
@@ -71,7 +71,6 @@ const AccordionRoot = React.forwardRef<
             {...props}
             type="single"
             value={value as string}
-            onValueChange={onValueChange}
             defaultValue={defaultValue as string}
             collapsible={collapsible}
             {...commonProps}

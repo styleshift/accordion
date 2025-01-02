@@ -19,7 +19,7 @@ const styles = tv({
   variants: {
     unstyled: {
       false: {
-        root: ['border rounded-lg'],
+        root: ['border rounded-lg '],
         item: [' border-b group last:border-b-0'],
         trigger: [
           'px-4 py-3 rounded  flex text-left items-center justify-start w-full',
@@ -70,6 +70,14 @@ const styles = tv({
         content: 'transition-none',
       },
     },
+    border: {
+      false: {
+        root: 'border-transparent',
+      },
+      true: {
+        root: 'border-border',
+      },
+    },
     collapsible: {
       true: {},
       false: {},
@@ -77,14 +85,6 @@ const styles = tv({
     multiple: {
       true: {},
       false: {},
-    },
-    border: {
-      true: {
-        root: 'border-border',
-      },
-      false: {
-        root: 'border-transparent',
-      },
     },
   },
 });

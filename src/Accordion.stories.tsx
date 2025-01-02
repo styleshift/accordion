@@ -1,6 +1,7 @@
 import * as React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import Accordion from './Accordion';
+import { table } from 'console';
 
 // Define content data separately
 const ACCORDION_ITEMS = [
@@ -37,41 +38,65 @@ const meta = {
   },
   argTypes: {
     disabled: {
-      control: 'boolean',
+      control: { type: 'boolean' },
       description: 'Disables all interactions',
+      table: {
+        defaultValue: { summary: false },
+      },
     },
     collapsible: {
-      control: 'boolean',
+      control: { type: 'boolean' },
       description: 'Allows collapsing the last open item (single mode)',
+      defaultValue: true,
+      table: {
+        defaultValue: { summary: true },
+      },
     },
     multiple: {
-      control: 'boolean',
+      control: { type: 'boolean' },
       description: 'Allows multiple open items',
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false },
+      },
     },
     transitions: {
-      control: 'boolean',
+      control: { type: 'boolean' },
       description: 'Enables animations',
       defaultValue: true,
+      table: {
+        defaultValue: { summary: true },
+      },
     },
     separators: {
-      control: 'boolean',
+      control: { type: 'boolean' },
       description: 'Shows item dividers',
       defaultValue: true,
+      table: {
+        defaultValue: { summary: true },
+      },
     },
-    unstyled: {
-      control: 'boolean',
-      description: 'Removes default styling',
-      defaultValue: false,
+  },
+  border: {
+    control: { type: 'boolean' },
+    description: 'Shows outer border',
+    defaultValue: true,
+    table: {
+      defaultValue: { summary: true },
+    },
+  },
+  unstyled: {
+    control: { type: 'boolean' },
+    description: 'Removes default styling',
+    defaultValue: false,
+    table: {
+      defaultValue: { summary: false },
     },
     className: {
-      table: {
-        disable: true,
-      },
+      table: { disable: true },
     },
     children: {
-      table: {
-        disable: true,
-      },
+      table: { disable: true },
     },
   },
 } satisfies Meta<typeof Accordion>;
@@ -152,21 +177,6 @@ export const NonCollapsible: Story = {
     },
   },
 };
-
-export const WithoutTransitions: Story = {
-  args: {
-    ...Default.args,
-    transitions: false,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Instant state changes without animations.',
-      },
-    },
-  },
-};
-
 export const WithoutBorder: Story = {
   args: {
     ...Default.args,
@@ -190,6 +200,20 @@ export const WithoutSeparators: Story = {
     docs: {
       description: {
         story: 'No dividers between items.',
+      },
+    },
+  },
+};
+
+export const WithoutTransitions: Story = {
+  args: {
+    ...Default.args,
+    transitions: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Instant state changes without animations.',
       },
     },
   },
