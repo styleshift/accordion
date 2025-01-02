@@ -75,21 +75,21 @@ const meta = {
         defaultValue: { summary: true },
       },
     },
-  },
-  border: {
-    control: { type: 'boolean' },
-    description: 'Shows outer border',
-    defaultValue: true,
-    table: {
-      defaultValue: { summary: true },
+    border: {
+      control: { type: 'boolean' },
+      description: 'Shows outer border',
+      defaultValue: true,
+      table: {
+        defaultValue: { summary: true },
+      },
     },
-  },
-  unstyled: {
-    control: { type: 'boolean' },
-    description: 'Removes default styling',
-    defaultValue: false,
-    table: {
-      defaultValue: { summary: false },
+    unstyled: {
+      control: { type: 'boolean' },
+      description: 'Removes default styling',
+      defaultValue: false,
+      table: {
+        defaultValue: { summary: false },
+      },
     },
     className: {
       table: { disable: true },
