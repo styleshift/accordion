@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, Controls, Stories } from '@storybook/blocks';
+import { Meta, Story, Canvas, Controls } from '@storybook/blocks';
 import * as AccordionStories from './Accordion.stories';
 
 <Meta
@@ -7,6 +7,7 @@ import * as AccordionStories from './Accordion.stories';
   tags={['autodocs']}
   parameters={{
     componentSubtitle: 'An expandable/collapsible content container',
+    status: { type: 'stable' },
   }}
 />
 
@@ -18,4 +19,25 @@ A vertically stacked set of interactive headings that each reveal a section of c
 
 <Controls />
 
-<Stories />
+## Usage
+
+```tsx
+import { Accordion } from '@styleshift/accordion';
+
+function Example() {
+  return (
+    <Accordion type="single" collapsible>
+      <Accordion.Item value="item-1">
+        <Accordion.Trigger>Section 1</Accordion.Trigger>
+        <Accordion.Content>Content for section 1</Accordion.Content>
+      </Accordion.Item>
+    </Accordion>
+  );
+}
+```
+
+## API
+
+### Component Props
+
+<Controls of={AccordionStories.Default} />
